@@ -21,7 +21,7 @@ const Index = () => {
         </div>
         <div className="hero-overlay" />
         <div className="site-container hero-content">
-          <div className="hero-kicker"><span className="red-dot" /> CATALOG · DATE DE CONFIGURAT</div>
+          <div className="hero-kicker"><span className="red-dot" /> CATALOG CU MATERIALE DE CONSTRUCȚII</div>
           <h1>Materiale care țin<br /><em>proiectele în picioare.</em></h1>
           <p>Un punct de pornire clar pentru constructori, echipe și proprietari: găsești rapid produsele potrivite, apoi ne trimiți lista pentru o ofertă personalizată.</p>
           <div className="hero-actions">
