@@ -61,7 +61,7 @@ const QuoteRequestPage = () => {
                 <label className="field"><span>Nume complet *</span><input required value={form.name} onChange={(event) => update("name", event.target.value)} placeholder="Ex. Andrei Popescu" /></label>
                 <label className="field"><span>Companie <small>opțional</small></span><input value={form.company} onChange={(event) => update("company", event.target.value)} placeholder="Ex. Compania SRL" /></label>
                 <label className="field"><span>Email *</span><input required type="email" value={form.email} onChange={(event) => update("email", event.target.value)} placeholder="nume@exemplu.ro" /></label>
-                <label className="field"><span>Telefon *</span><input required value={form.phone} onChange={(event) => update("phone", event.target.value)} placeholder="+40 700 000 000" /></label>
+                <label className="field"><span>Telefon *</span><input required value={form.phone} onChange={(event) => update("phone", event.target.value)} placeholder="+40 744 116 311" /></label>
                 <label className="field field-full"><span>Localitate de livrare *</span><input required value={form.deliveryLocality} onChange={(event) => update("deliveryLocality", event.target.value)} placeholder="Ex. Cluj-Napoca, Cluj" /></label>
                 <label className="field field-full"><span>Detalii suplimentare <small>opțional</small></span><textarea value={form.comments} onChange={(event) => update("comments", event.target.value)} placeholder="Spune-ne despre proiect, termen sau alte cerințe..." rows={5} /></label>
               </div>
