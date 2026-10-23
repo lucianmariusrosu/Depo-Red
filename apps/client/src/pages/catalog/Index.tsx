@@ -22,7 +22,7 @@ const CatalogPage = () => {
     <SiteShell>
       <section className="page-hero page-hero-catalog">
         <div className="site-container page-hero-inner">
-          <span className="eyebrow eyebrow-light">Catalog demo · 18 categorii</span>
+          <span className="eyebrow eyebrow-light">Catalog cu - 18 categorii</span>
           <h1>Produse pregătite<br /><em>pentru lista ta.</em></h1>
           <p>Explorează structura catalogului, filtrează după categorie și adaugă produse la cererea de ofertă.</p>
         </div>
