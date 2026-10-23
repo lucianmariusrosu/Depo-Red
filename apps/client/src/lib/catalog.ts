@@ -1,0 +1,140 @@
+export type Product = {
+  id: string;
+  slug: string;
+  name: string;
+  category: string;
+  categorySlug: string;
+  shortDescription: string;
+  description: string;
+  image: string;
+  unit: string;
+  sampleSpecs: Array<{ label: string; value: string }>;
+  priceRon?: number;
+  isSample: true;
+  featured?: boolean;
+};
+
+export const categories = [
+  { slug: "ciment-mortare", name: "Ciment și mortare", note: "Pentru fundații, șape și reparații" },
+  { slug: "adezivi-chituri", name: "Adezivi și chituri", note: "Fixare, placări și finisaje" },
+  { slug: "polistiren-termoizolatii", name: "Polistiren și termoizolații", note: "Sisteme pentru eficiență energetică" },
+  { slug: "vata-minerala", name: "Vată minerală", note: "Izolații pentru confort și protecție" },
+  { slug: "gips-carton-profile", name: "Gips-carton și profile", note: "Compartimentări și tavane" },
+  { slug: "vopsele-tencuieli", name: "Vopsele și tencuieli decorative", note: "Straturi finale cu personalitate" },
+  { slug: "hidroizolatii", name: "Hidroizolații", note: "Protecție pentru suprafețe și fundații" },
+  { slug: "zidarie", name: "Materiale pentru zidărie", note: "Soluții pentru pereți durabili" },
+  { slug: "acoperisuri", name: "Acoperișuri", note: "Sisteme complete pentru învelitori" },
+  { slug: "tabla", name: "Tablă", note: "Profile și accesorii pentru protecție" },
+  { slug: "sisteme-scurgere", name: "Sisteme scurgere", note: "Colectare și evacuare controlată" },
+  { slug: "usi-ferestre", name: "Uși și Ferestre", note: "Soluții pentru anvelopa clădirii" },
+  { slug: "usi-garaj", name: "Uși garaj", note: "Acces practic și sigur" },
+  { slug: "chimice-accesorii", name: "Chimice și accesorii", note: "Etanșare, montaj și întreținere" },
+  { slug: "sarma-role-max", name: "Sârmă și Role MAX TWINTIER", note: "Legare și armare eficientă" },
+  { slug: "iluminat", name: "Iluminat", note: "Lumină pentru spații de lucru și locuire" },
+  { slug: "piatra-naturala", name: "Piatră naturală", note: "Texturi autentice pentru proiecte durabile" },
+  { slug: "scule-accesorii", name: "Scule și accesorii", note: "Echipare pentru fiecare etapă" },
+] as const;
+
+const imageFor = (slot: string) => `/assets/slots/${slot}.jpg`;
+
+export const products: Product[] = [
+  {
+    id: "ciment-demo",
+    slug: "ciment-demo",
+    name: "Ciment pentru lucrări generale — produs demo",
+    category: "Ciment și mortare",
+    categorySlug: "ciment-mortare",
+    shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
+    description:
+      "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
+    image: imageFor("product.ciment-demo.card"),
+    unit: "sac",
+    sampleSpecs: [
+      { label: "Ambalare", value: "Exemplu de completat" },
+      { label: "Utilizare", value: "Lucrări generale — demo" },
+      { label: "Clasă", value: "De completat cu date reale" },
+    ],
+    priceRon: 0,
+    isSample: true,
+    featured: true,
+  },
+  {
+    id: "adeziv-demo",
+    slug: "adeziv-demo",
+    name: "Adeziv flexibil pentru placări — produs demo",
+    category: "Adezivi și chituri",
+    categorySlug: "adezivi-chituri",
+    shortDescription: "Exemplu de adeziv pentru placări interioare și exterioare.",
+    description:
+      "Produs demonstrativ. Specificațiile, consumul și compatibilitatea trebuie înlocuite cu informații verificate de la furnizor înainte de publicare.",
+    image: imageFor("product.adeziv-demo.card"),
+    unit: "sac",
+    sampleSpecs: [
+      { label: "Suprafață", value: "Exemplu de completat" },
+      { label: "Aplicare", value: "Interior / exterior — demo" },
+      { label: "Consum", value: "De completat cu date reale" },
+    ],
+    priceRon: 0,
+    isSample: true,
+    featured: true,
+  },
+  {
+    id: "hidroizolatie-demo",
+    slug: "hidroizolatie-demo",
+    name: "Membrană pentru hidroizolație — produs demo",
+    category: "Hidroizolații",
+    categorySlug: "hidroizolatii",
+    shortDescription: "Exemplu de rolă pentru protecția fundațiilor și suprafețelor.",
+    description:
+      "Produs demonstrativ. Tipul membranei, dimensiunile, compatibilitățile și prețul se configurează după furnizarea datelor reale.",
+    image: imageFor("product.hidro-demo.card"),
+    unit: "rolă",
+    sampleSpecs: [
+      { label: "Format", value: "Exemplu de completat" },
+      { label: "Destinație", value: "Fundații și suprafețe — demo" },
+      { label: "Date tehnice", value: "De completat cu date reale" },
+    ],
+    priceRon: 0,
+    isSample: true,
+    featured: true,
+  },
+  {
+    id: "termoizolatie-demo",
+    slug: "termoizolatie-demo",
+    name: "Placă termoizolantă — produs demo",
+    category: "Polistiren și termoizolații",
+    categorySlug: "polistiren-termoizolatii",
+    shortDescription: "Exemplu de soluție pentru anveloparea clădirilor.",
+    description:
+      "Exemplu de catalog. Grosimea, densitatea, conductivitatea și prețul trebuie completate pe baza datelor reale ale produsului.",
+    image: imageFor("home.category.insulation"),
+    unit: "m²",
+    sampleSpecs: [
+      { label: "Grosime", value: "Exemplu de completat" },
+      { label: "Utilizare", value: "Anvelopare — demo" },
+      { label: "Format", value: "De completat cu date reale" },
+    ],
+    priceRon: 0,
+    isSample: true,
+    featured: true,
+  },
+];
+
+export const featuredProducts = products.filter((product) => product.featured);
+
+export function getProductBySlug(slug: string) {
+  return products.find((product) => product.slug === slug);
+}
+
+export function getCategoryBySlug(slug: string) {
+  return categories.find((category) => category.slug === slug);
+}
+
+export const company = {
+  name: "CONSTRUMAT DEMO",
+  tagline: "Materiale corecte pentru proiecte solide.",
+  phone: "+40 700 000 000",
+  email: "oferta@construmat-demo.ro",
+  address: "Adresă placeholder, România",
+  hours: "Luni–Vineri · 08:00–17:00",
+};

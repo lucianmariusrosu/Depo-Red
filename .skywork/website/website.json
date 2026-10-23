@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "websiteBinding",
+  "website_id": "01a169bd-3e5b-7409-a7d0-eaeb8c3ebc7d",
+  "source_dir": ".",
+  "source_type": "self-host",
+  "framework": "hono",
+  "manifest_path": ".skywork/website.json",
+  "authority": "bindingHint"
+}

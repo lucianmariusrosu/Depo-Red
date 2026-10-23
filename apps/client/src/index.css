@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Urbanist:wght@500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #ffffff;
+  --surface: #f6f7f8;
+  --surface-strong: #edf0f2;
+  --ink: #232b35;
+  --ink-soft: #4a5562;
+  --muted: #718096;
+  --line: #dbe0e5;
+  --line-strong: #bfc7cf;
+  --slate: #2d3748;
+  --slate-deep: #202a38;
+  --red: #c64242;
+  --red-dark: #a52f33;
+  --white: #ffffff;
+  --radius: 4px;
+  --shadow: 0 14px 40px rgba(35, 43, 53, 0.08);
+  --shadow-strong: 0 20px 60px rgba(35, 43, 53, 0.16);
+  --background-rgb: 255, 255, 255;
+  font-family: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--background);
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--ink);
+  --color-border: var(--line);
+  --color-primary: var(--slate);
+  --color-primary-foreground: var(--white);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--background); color: var(--ink); }
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; }
+
+.site-frame { min-height: 100vh; overflow: hidden; }
+.site-container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.top-strip { background: var(--slate-deep); color: #dbe2ea; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+.top-strip-inner { min-height: 34px; display: flex; align-items: center; justify-content: space-between; }
+.top-strip-meta { display: inline-flex; align-items: center; gap: 7px; color: #fff; }
+.site-header { position: relative; z-index: 10; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); }
+.header-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; background: var(--red); color: var(--white); font: 800 21px/1 "Urbanist", sans-serif; }
+.brand-mark span { color: #ffd4d4; }
+.brand-copy { display: grid; gap: 2px; }
+.brand-copy strong { font: 800 18px/1 "Urbanist", sans-serif; letter-spacing: .08em; }
+.brand-copy small { color: var(--muted); font-size: 8px; letter-spacing: .13em; }
+.main-nav { display: flex; align-items: center; gap: 26px; }
+.nav-link { position: relative; padding: 8px 0; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
+.nav-link:after { content: ""; position: absolute; left: 0; right: 100%; bottom: 1px; height: 2px; background: var(--red); transition: right .2s ease; }
+.nav-link:hover, .nav-link.is-active { color: var(--ink); }
+.nav-link:hover:after, .nav-link.is-active:after { right: 0; }
+.quote-nav-link { display: inline-flex; align-items: center; gap: 8px; padding: 11px 15px; background: var(--slate); color: #fff; font-size: 12px; font-weight: 700; }
+.nav-count { display: grid; place-items: center; width: 19px; height: 19px; border-radius: 50%; background: var(--red); font-size: 10px; }
+.mobile-menu-button { display: none; border: 0; background: none; color: var(--ink); }
+
+.hero-section { position: relative; min-height: 620px; background: var(--slate-deep); color: #fff; isolation: isolate; }
+.hero-media, .hero-media img, .hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-media img { object-fit: cover; object-position: center; }
+.hero-overlay { background: linear-gradient(90deg, rgba(20,29,41,.92) 0%, rgba(20,29,41,.66) 44%, rgba(20,29,41,.16) 100%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; min-height: 620px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 94px 0 92px; }
+.hero-kicker, .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--red); font: 700 10px/1 "Urbanist", sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+.hero-kicker { color: #e9edf2; }
+.red-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px rgba(198,66,66,.2); }
+h1, h2, h3 { margin: 0; font-family: "Urbanist", ui-sans-serif, sans-serif; letter-spacing: -.04em; }
+.hero-content h1 { max-width: 740px; margin: 23px 0 20px; font-size: clamp(46px, 7vw, 84px); line-height: .95; font-weight: 700; }
+h1 em, h2 em { color: var(--red); font-style: normal; }
+.hero-content p { max-width: 520px; color: #dbe2ea; font-size: 16px; line-height: 1.7; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 20px; border: 1px solid transparent; border-radius: 2px; font: 700 12px/1 "Urbanist", sans-serif; letter-spacing: .01em; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: var(--red); color: #fff; }
+.button-primary:hover { background: var(--red-dark); }
+.button-light { background: #fff; color: var(--slate); }
+.button-light:hover { background: #f0f2f4; }
+.button-outline { border-color: var(--line-strong); color: var(--ink); background: transparent; }
+.button-outline:hover { border-color: var(--slate); background: var(--surface); }
+.button-dark { background: var(--slate); color: #fff; }
+.button-dark:hover { background: var(--slate-deep); }
+.hero-proof { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 42px; color: #e7edf3; font-size: 11px; }
+.hero-proof span { display: inline-flex; align-items: center; gap: 7px; }
+.hero-proof svg { color: #ef9898; }
+.hero-index { position: absolute; right: 44px; bottom: 32px; z-index: 2; color: rgba(255,255,255,.56); font: 700 11px/1 "Urbanist", sans-serif; letter-spacing: .17em; }
+
+.section { padding: 112px 0; }
+.section-intro { background: var(--background); }
+.intro-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 92px; align-items: end; }
+.section h2 { margin-top: 17px; font-size: clamp(36px, 5vw, 62px); line-height: .98; font-weight: 700; }
+.section h2 span { color: var(--muted); }
+.intro-copy { max-width: 440px; padding-bottom: 4px; color: var(--ink-soft); font-size: 16px; line-height: 1.8; }
+.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font: 700 12px/1 "Urbanist", sans-serif; border-bottom: 1px solid var(--red); padding-bottom: 5px; }
+.text-link:hover { color: var(--red-dark); }
+.benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--line); }
+.benefit-item { padding-right: 16px; }
+.benefit-icon { display: grid; place-items: center; width: 40px; height: 40px; color: var(--red); border: 1px solid #e5b2b2; margin-bottom: 22px; }
+.benefit-item h3 { font-size: 18px; line-height: 1.15; }
+.benefit-item p { margin: 9px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+.section-categories { background: var(--surface); }
+.section-heading-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 52px; }
+.section-aside { padding-bottom: 8px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: right; }
+.category-grid { display: grid; grid-template-columns: 1.1fr 1.1fr .8fr; gap: 14px; }
+.category-card { display: flex; flex-direction: column; min-height: 390px; background: #fff; border: 1px solid var(--line); transition: box-shadow .25s ease, transform .25s ease; }
+.category-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.category-image { height: 258px; overflow: hidden; background: var(--surface-strong); }
+.category-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.category-card:hover .category-image img { transform: scale(1.04); }
+.category-image-placeholder { display: grid; place-items: center; color: #aeb6bf; background: linear-gradient(145deg, #dfe4e8, #f5f6f7); }
+.category-image-placeholder span { font: 700 58px/1 "Urbanist"; color: rgba(45,55,72,.18); }
+.category-card-body { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 15px; padding: 22px; margin-top: auto; }
+.card-index { color: var(--red); font: 700 11px/1 "Urbanist"; }
+.category-card h3 { font-size: 19px; line-height: 1.1; letter-spacing: -.02em; }
+.category-card p { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+.category-card-body > svg { color: var(--muted); }
+.category-ribbon { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border: 1px solid var(--line); border-top: 0; background: #fff; color: var(--muted); font-size: 12px; }
+.category-ribbon a { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-weight: 700; }
+.category-ribbon a:hover { color: var(--red); }
+
+.section-products { background: var(--background); }
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.product-card { min-width: 0; border: 1px solid var(--line); background: #fff; transition: box-shadow .25s ease, transform .25s ease; }
+.product-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.product-card-image { display: block; position: relative; height: 220px; overflow: hidden; background: var(--surface-strong); }
+.product-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.product-card:hover .product-card-image img { transform: scale(1.04); }
+.sample-badge { position: absolute; top: 12px; left: 12px; padding: 6px 8px; background: #fff; color: var(--red); font: 800 9px/1 "Urbanist"; letter-spacing: .1em; }
+.sample-badge-dark { background: var(--slate); color: #fff; }
+.product-card-content { display: flex; flex-direction: column; min-height: 194px; padding: 20px; }
+.product-category { color: var(--red); font: 700 9px/1.2 "Urbanist"; letter-spacing: .11em; text-transform: uppercase; }
+.product-card h3 { margin-top: 12px; font-size: 18px; line-height: 1.12; letter-spacing: -.025em; }
+.product-card h3:hover { color: var(--red-dark); }
+.product-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.product-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+.product-price { color: var(--ink); font: 700 12px/1 "Urbanist"; }
+.mini-add { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 34px; min-height: 30px; padding: 0 7px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink); font: 700 11px/1 "Urbanist"; }
+.mini-add:hover { border-color: var(--red); color: var(--red); }
+
+.promo-section { padding: 90px 0; background: var(--red); color: #fff; }
+.promo-inner { display: grid; grid-template-columns: 1fr .8fr; gap: 110px; align-items: end; }
+.eyebrow-light { color: #ffd9d9; }
+.promo-section h2 { margin-top: 16px; font-size: clamp(40px, 5vw, 67px); line-height: .98; }
+.promo-section p { max-width: 360px; margin: 0 0 25px; color: #ffe7e7; font-size: 14px; line-height: 1.75; }
+.promo-section .button-light { color: var(--red-dark); }
+.contact-strip { padding: 82px 0; }
+.contact-strip-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 44px; }
+.contact-strip h2 { font-size: clamp(35px, 5vw, 58px); }
+.contact-strip-details { display: grid; gap: 11px; min-width: 240px; color: var(--ink-soft); font-size: 13px; }
+.contact-strip-details a:not(.text-link) { font: 700 18px/1.2 "Urbanist"; }
+.contact-strip-details .text-link { width: fit-content; margin-top: 9px; }
+
+.site-footer { padding: 72px 0 24px; background: var(--slate-deep); color: #dbe2ea; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr .75fr .95fr 1fr; gap: 40px; padding-bottom: 65px; }
+.brand-footer { color: #fff; }
+.brand-footer .brand-copy small { color: #9da9b7; }
+.footer-intro { max-width: 290px; margin: 23px 0 16px; color: #9da9b7; font-size: 12px; line-height: 1.7; }
+.demo-note { color: #f0a7a7; font-size: 10px; letter-spacing: .04em; }
+.footer-heading { margin: 5px 0 18px; color: #fff; font: 700 11px/1 "Urbanist"; letter-spacing: .1em; text-transform: uppercase; }
+.footer-links { display: grid; gap: 11px; color: #aab4c0; font-size: 12px; }
+.footer-links a:hover { color: #fff; }
+.footer-callout { padding-left: 24px; border-left: 1px solid rgba(255,255,255,.15); }
+.footer-callout .eyebrow { color: #f0a7a7; }
+.footer-callout h3 { margin: 14px 0 23px; color: #fff; font-size: 21px; line-height: 1.2; }
+.footer-callout .text-link { color: #fff; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); color: #7f8b99; font-size: 10px; }
+.footer-bottom > div { display: flex; gap: 22px; }
+.footer-bottom a:hover { color: #fff; }
+
+.page-hero { position: relative; min-height: 390px; display: flex; align-items: flex-end; background: var(--slate-deep); color: #fff; }
+.page-hero:before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,29,41,.96), rgba(20,29,41,.72)); }
+.page-hero-inner { position: relative; z-index: 1; padding: 82px 0 76px; }
+.page-hero h1 { margin-top: 18px; font-size: clamp(46px, 7vw, 76px); line-height: .94; }
+.page-hero p { max-width: 500px; margin: 22px 0 0; color: #d9e1e9; font-size: 15px; line-height: 1.7; }
+.page-hero-catalog:after, .page-hero-quote:after, .page-hero-about:after, .page-hero-contact:after { content: ""; position: absolute; right: 10%; bottom: 0; width: 31%; height: 70%; opacity: .3; background: linear-gradient(135deg, transparent 48%, var(--red) 49%, var(--red) 51%, transparent 52%), repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1px, transparent 1px 34px); }
+.catalog-section { padding-top: 55px; }
+.catalog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-bottom: 44px; }
+.search-box { display: flex; align-items: center; gap: 10px; width: min(460px, 100%); padding: 0 14px; border-bottom: 1px solid var(--ink); color: var(--muted); }
+.search-box input { width: 100%; height: 46px; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 13px; }
+.catalog-count { color: var(--muted); font-size: 12px; }
+.catalog-count span { color: var(--ink); font: 700 24px/1 "Urbanist"; }
+.catalog-layout { display: grid; grid-template-columns: 245px 1fr; gap: 54px; }
+.catalog-sidebar { align-self: start; }
+.sidebar-heading { display: flex; align-items: center; gap: 8px; padding-bottom: 16px; color: var(--ink); font: 700 11px/1 "Urbanist"; letter-spacing: .11em; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+.category-filter { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 13px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--muted); text-align: left; font-size: 11px; line-height: 1.3; }
+.category-filter span { color: #a5afb8; font: 700 12px/1 "Urbanist"; }
+.category-filter:hover, .category-filter.is-selected { color: var(--red); }
+.category-filter.is-selected span { color: var(--red); }
+.sidebar-note { display: flex; gap: 10px; margin-top: 30px; padding: 15px; background: var(--surface); color: var(--muted); font-size: 11px; line-height: 1.55; }
+.sidebar-note svg { flex: 0 0 auto; color: var(--red); }
+.sidebar-note p { margin: 0; }
+.results-heading { display: flex; justify-content: space-between; gap: 25px; align-items: center; margin-bottom: 20px; color: var(--muted); font-size: 11px; }
+.results-heading p { margin: 0; }
+.results-heading strong { color: var(--ink); }
+.catalog-grid { grid-template-columns: repeat(3, 1fr); }
+.empty-state { display: grid; place-items: center; gap: 13px; min-height: 300px; padding: 45px 20px; border: 1px dashed var(--line-strong); text-align: center; }
+.empty-state h2, .empty-state h1 { font-size: 30px; }
+.empty-state p { margin: 0; color: var(--muted); font-size: 13px; }
+.page-empty { min-height: 64vh; border: 0; }
+
+.product-detail-section { padding-top: 55px; }
+.back-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font: 700 11px/1 "Urbanist"; }
+.back-link:hover { color: var(--red); }
+.product-detail-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 84px; align-items: start; margin-top: 45px; }
+.product-detail-media { position: relative; min-height: 540px; background: var(--surface-strong); overflow: hidden; }
+.product-detail-media img { width: 100%; height: 540px; object-fit: cover; }
+.product-detail-copy h1 { margin: 15px 0 20px; max-width: 620px; font-size: clamp(38px, 5vw, 62px); line-height: .98; }
+.product-lead { max-width: 550px; margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.75; }
+.detail-divider { margin: 32px 0 25px; border-top: 1px solid var(--line); }
+.detail-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px; }
+.detail-meta-grid div { display: grid; gap: 7px; }
+.detail-meta-grid span, .field-label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
+.detail-meta-grid strong { font: 700 17px/1 "Urbanist"; }
+.specs-box { padding: 18px 20px; background: var(--surface); }
+.specs-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 11px; color: var(--ink); font: 700 11px/1 "Urbanist"; text-transform: uppercase; letter-spacing: .08em; }
+.spec-row { display: flex; justify-content: space-between; gap: 18px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 12px; }
+.spec-row span { color: var(--muted); }
+.spec-row strong { color: var(--ink-soft); font-weight: 600; text-align: right; }
+.quantity-row { display: flex; align-items: flex-end; gap: 17px; margin-top: 28px; }
+.quantity-stepper { display: flex; align-items: center; width: 126px; height: 46px; margin-top: 8px; border: 1px solid var(--line-strong); }
+.quantity-stepper button { display: grid; place-items: center; width: 40px; height: 100%; border: 0; background: transparent; color: var(--ink); }
+.quantity-stepper button:hover { color: var(--red); }
+.quantity-stepper span { flex: 1; text-align: center; font: 700 13px/1 "Urbanist"; }
+.button-add-detail { flex: 1; min-height: 46px; }
+.inline-success { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 15px; color: #28714f; font-size: 12px; }
+.inline-success button { padding: 0; border: 0; border-bottom: 1px solid #28714f; background: none; color: inherit; font-weight: 700; }
+.trust-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 25px; color: var(--muted); font-size: 10px; }
+.trust-row span { display: inline-flex; align-items: center; gap: 6px; }
+.product-detail-note { padding-top: 0; }
+.note-panel { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 34px; border: 1px solid var(--line); background: var(--surface); }
+.note-panel h2 { max-width: 530px; margin-top: 12px; font-size: 29px; }
+
+.quote-section { padding-top: 60px; }
+.quote-layout { display: grid; grid-template-columns: .86fr 1.14fr; gap: 24px; align-items: start; }
+.quote-list-panel, .quote-form-panel { border: 1px solid var(--line); background: #fff; padding: 32px; }
+.panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.panel-heading h2 { margin-top: 9px; font-size: 31px; line-height: 1; }
+.item-count-large { color: var(--muted); font: 700 12px/1 "Urbanist"; }
+.quote-empty { display: grid; justify-items: center; gap: 12px; min-height: 320px; padding: 50px 20px; text-align: center; color: var(--muted); }
+.quote-empty svg { color: var(--red); }
+.quote-empty h3 { color: var(--ink); font-size: 22px; }
+.quote-empty p { margin: 0 0 8px; font-size: 12px; }
+.quote-items { display: grid; }
+.quote-item { display: grid; grid-template-columns: 32px 1fr auto 28px; align-items: center; gap: 12px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.quote-item-index { color: var(--red); font: 700 10px/1 "Urbanist"; }
+.quote-item-copy { display: grid; gap: 5px; }
+.quote-item-copy a { color: var(--ink); font: 700 13px/1.3 "Urbanist"; }
+.quote-item-copy a:hover { color: var(--red); }
+.quote-item-copy span { color: var(--muted); font-size: 10px; }
+.quantity-stepper-small { width: 96px; height: 34px; margin: 0; }
+.quantity-stepper-small button { width: 31px; }
+.remove-item { display: grid; place-items: center; width: 28px; height: 28px; border: 0; background: transparent; color: var(--muted); }
+.remove-item:hover { color: var(--red); }
+.add-more-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 21px; color: var(--ink); font: 700 11px/1 "Urbanist"; }
+.add-more-link:hover { color: var(--red); }
+.quote-disclaimer { display: flex; gap: 8px; margin-top: 32px; padding: 13px; background: var(--surface); color: var(--muted); font-size: 10px; line-height: 1.5; }
+.quote-disclaimer svg { flex: 0 0 auto; color: var(--red); }
+.quote-disclaimer p { margin: 0; }
+.required-note { color: var(--muted); font-size: 10px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding-top: 26px; }
+.field { display: grid; gap: 8px; }
+.field-full { grid-column: 1 / -1; }
+.field > span { color: var(--ink-soft); font: 700 10px/1 "Urbanist"; letter-spacing: .04em; }
+.field small { color: var(--muted); font: 400 10px/1 "Epilogue"; }
+.field input, .field textarea { width: 100%; border: 1px solid var(--line); border-radius: 0; outline: none; background: #fff; color: var(--ink); padding: 12px 13px; font-size: 12px; transition: border .2s ease, box-shadow .2s ease; }
+.field textarea { resize: vertical; }
+.field input:focus, .field textarea:focus { border-color: var(--slate); box-shadow: 0 0 0 3px rgba(45,55,72,.08); }
+.form-error { margin-top: 20px; padding: 12px; background: #fff1f1; color: var(--red-dark); font-size: 11px; }
+.submit-quote { width: 100%; margin-top: 25px; }
+.form-footnote { margin: 15px 0 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.confirmation-page { display: grid; place-items: center; min-height: 74vh; padding: 60px 24px; background: var(--surface); }
+.confirmation-card { width: min(580px, 100%); padding: 52px; border: 1px solid var(--line); background: #fff; text-align: center; box-shadow: var(--shadow); }
+.confirmation-icon { display: grid; place-items: center; width: 68px; height: 68px; margin: 0 auto 25px; border-radius: 50%; background: #e4f3eb; color: #28714f; }
+.confirmation-card h1 { margin: 18px 0; font-size: 42px; line-height: 1; }
+.confirmation-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.reference-box { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 28px 0; padding: 18px; background: var(--surface); }
+.reference-box span { color: var(--muted); font-size: 11px; }
+.reference-box strong { color: var(--ink); font: 700 18px/1 "Urbanist"; }
+.confirmation-actions { display: flex; justify-content: center; align-items: center; gap: 24px; }
+.prototype-label { display: block; margin-top: 28px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+
+.about-intro-grid, .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start; }
+.about-intro h2, .contact-info h2 { max-width: 530px; margin-top: 17px; font-size: clamp(36px, 5vw, 58px); line-height: .98; }
+.about-intro-grid > div:last-child { padding-top: 42px; color: var(--ink-soft); font-size: 15px; line-height: 1.8; }
+.about-intro-grid p { margin: 0 0 20px; }
+.muted-copy { color: var(--muted); font-size: 12px; }
+.about-values { background: var(--surface); }
+.value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 52px; }
+.value-card { min-height: 215px; padding: 25px 22px; border: 1px solid var(--line); background: #fff; }
+.value-card svg { color: var(--red); }
+.value-card h3 { margin-top: 25px; font-size: 19px; }
+.value-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.about-cta { padding-top: 0; background: var(--surface); }
+.about-cta-panel { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 56px; background: var(--red); color: #fff; }
+.about-cta-panel h2 { margin-top: 14px; color: #fff; font-size: clamp(34px, 5vw, 58px); }
+.about-cta-panel .button-light { color: var(--red-dark); }
+
+.contact-section { padding-top: 76px; }
+.contact-info-list { display: grid; gap: 15px; margin-top: 45px; }
+.contact-info-list > * { display: flex; align-items: center; gap: 14px; }
+.contact-info-list > * > span { display: grid; place-items: center; width: 39px; height: 39px; color: var(--red); border: 1px solid #e5b2b2; }
+.contact-info-list small { display: block; margin-bottom: 4px; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
+.contact-info-list strong { font: 700 16px/1.2 "Urbanist"; }
+.contact-hours { display: grid; gap: 5px; margin: 35px 0 25px; padding-top: 25px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.contact-hours strong { color: var(--ink); font: 700 14px/1.2 "Urbanist"; }
+.contact-form { padding: 34px; border: 1px solid var(--line); }
+.contact-form .field { margin-top: 21px; }
+.contact-form .button { margin-top: 25px; }
+.contact-form .inline-success { display: grid; justify-items: start; gap: 7px; padding: 13px; background: #e4f3eb; color: #28714f; }
+.contact-form .inline-success span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.contact-form .inline-success small { color: #4b7d63; font-size: 10px; }
+
+.legal-page { padding: 90px 0 120px; background: var(--surface); }
+.legal-content { max-width: 820px; }
+.legal-content h1 { margin: 20px 0 28px; font-size: clamp(42px, 6vw, 72px); line-height: .95; }
+.legal-content h2 { margin: 45px 0 12px; font-size: 27px; }
+.legal-content p { max-width: 700px; color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
+.legal-content .lead { color: var(--muted); font-size: 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 980px) {
+  .main-nav { gap: 16px; }
+  .product-grid, .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefit-grid, .value-grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-callout { padding-left: 0; border-left: 0; }
+  .product-detail-grid { gap: 40px; }
+  .quote-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .site-container { width: min(100% - 34px, 580px); }
+  .top-strip-inner { min-height: 32px; font-size: 9px; }
+  .top-strip-inner > span:first-child { display: none; }
+  .header-inner { min-height: 72px; }
+  .mobile-menu-button { display: grid; place-items: center; }
+  .main-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 17px 18px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .main-nav.is-open { display: flex; }
+  .nav-link { padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .quote-nav-link { justify-content: center; margin-top: 12px; }
+  .hero-section, .hero-content { min-height: 650px; }
+  .hero-content { padding: 74px 0; }
+  .hero-content h1 { font-size: clamp(44px, 13vw, 68px); }
+  .hero-content p { font-size: 14px; }
+  .hero-proof { display: grid; gap: 10px; margin-top: 32px; }
+  .hero-index { right: 17px; bottom: 22px; }
+  .section { padding: 74px 0; }
+  .intro-grid, .promo-inner, .about-intro-grid, .contact-layout { grid-template-columns: 1fr; gap: 30px; }
+  .intro-copy { padding: 0; }
+  .benefit-grid { margin-top: 50px; }
+  .section-heading-row, .contact-strip-inner, .about-cta-panel, .category-ribbon, .footer-bottom { align-items: flex-start; flex-direction: column; }
+  .section-heading-row { gap: 22px; margin-bottom: 33px; }
+  .section-aside { padding: 0; text-align: left; }
+  .category-grid { grid-template-columns: 1fr; }
+  .category-card { min-height: 330px; }
+  .category-image { height: 220px; }
+  .product-grid, .catalog-grid { grid-template-columns: 1fr; }
+  .product-card-image { height: 260px; }
+  .promo-section { padding: 74px 0; }
+  .promo-inner { gap: 30px; }
+  .contact-strip-details { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; gap: 35px; }
+  .footer-bottom { gap: 14px; }
+  .footer-bottom > div { flex-direction: column; gap: 10px; }
+  .page-hero { min-height: 420px; }
+  .page-hero-inner { padding: 70px 0 58px; }
+  .catalog-toolbar { align-items: stretch; flex-direction: column; margin-bottom: 30px; }
+  .catalog-layout { grid-template-columns: 1fr; gap: 35px; }
+  .catalog-sidebar { padding-bottom: 8px; }
+  .catalog-sidebar .category-filter:nth-of-type(n+7) { display: none; }
+  .results-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .product-detail-grid { grid-template-columns: 1fr; gap: 36px; }
+  .product-detail-media, .product-detail-media img { min-height: 360px; height: 360px; }
+  .quantity-row { align-items: stretch; flex-direction: column; }
+  .button-add-detail { flex: unset; width: 100%; }
+  .note-panel { align-items: flex-start; flex-direction: column; padding: 25px; }
+  .quote-list-panel, .quote-form-panel, .contact-form { padding: 24px 20px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field-full { grid-column: auto; }
+  .quote-item { grid-template-columns: 25px 1fr 28px; }
+  .quote-item .quantity-stepper { grid-column: 2; }
+  .quote-item .remove-item { grid-column: 3; grid-row: 1 / span 2; }
+  .confirmation-card { padding: 38px 22px; }
+  .confirmation-card h1 { font-size: 35px; }
+  .confirmation-actions { align-items: center; flex-direction: column; gap: 16px; }
+  .about-intro-grid > div:last-child { padding-top: 0; }
+  .value-grid { grid-template-columns: 1fr; }
+  .about-cta-panel { padding: 34px 24px; }
+  .contact-info-list { margin-top: 30px; }
+  .legal-page { padding: 70px 0 90px; }
+}
