@@ -18,15 +18,15 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      "/": "CONSTRUMAT DEMO — Materiale pentru proiecte solide",
-      "/produse": "Catalog produse — CONSTRUMAT DEMO",
-      "/cerere-oferta": "Solicită ofertă — CONSTRUMAT DEMO",
-      "/despre-noi": "Despre noi — CONSTRUMAT DEMO",
-      "/contact": "Contact — CONSTRUMAT DEMO",
-      "/politica-confidentialitate": "Politica de confidențialitate — CONSTRUMAT DEMO",
-      "/termeni-si-conditii": "Termeni și condiții — CONSTRUMAT DEMO",
+      "/": "ROT MAN CONSTRUCT — Materiale pentru proiecte solide",
+      "/produse": "Catalog produse — ROT MAN CONSTRUCT",
+      "/cerere-oferta": "Solicită ofertă — ROT MAN CONSTRUCT",
+      "/despre-noi": "Despre noi — ROT MAN CONSTRUCT",
+      "/contact": "Contact — ROT MAN CONSTRUCT",
+      "/politica-confidentialitate": "Politica de confidențialitate — ROT MAN CONSTRUCT",
+      "/termeni-si-conditii": "Termeni și condiții — ROT MAN CONSTRUCT",
     };
-    document.title = titles[location.pathname] || "Detaliu produs — CONSTRUMAT DEMO";
+    document.title = titles[location.pathname] || "Detaliu produs — ROT MAN CONSTRUCT";
   }, [location.pathname]);
 
   return (
@@ -40,9 +40,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
       <header className="site-header">
         <div className="site-container header-inner">
-          <Link to="/" className="brand" aria-label="CONSTRUMAT DEMO, acasă" onClick={() => setOpen(false)}>
+          <Link to="/" className="brand" aria-label="ROT MAN CONSTRUCT, acasă" onClick={() => setOpen(false)}>
             <span className="brand-mark">C<span>.</span></span>
-            <span className="brand-copy"><strong>CONSTRUMAT</strong><small>MATERIALE PENTRU PROIECTE SOLIDE</small></span>
+            <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>MATERIALE PENTRU PROIECTE SOLIDE</small></span>
           </Link>
           <button className="mobile-menu-button" type="button" aria-label={open ? "Închide meniul" : "Deschide meniul"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -67,7 +67,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <Link to="/" className="brand brand-footer">
               <span className="brand-mark">C<span>.</span></span>
-              <span className="brand-copy"><strong>CONSTRUMAT</strong><small>CATALOG DEMO</small></span>
+              <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>CATALOG DEMO</small></span>
             </Link>
             <p className="footer-intro">Un catalog modern pentru materiale de construcții, construit să transforme o nevoie clară într-o ofertă bine pregătită.</p>
             <span className="demo-note">Date demonstrative · înlocuiește înainte de publicare</span>
@@ -97,7 +97,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="site-container footer-bottom">
-          <span>© 2026 CONSTRUMAT DEMO · Proiect independent</span>
+          <span>© 2026 ROT MAN CONSTRUCT · Proiect independent</span>
           <div><Link to="/politica-confidentialitate">Politica de confidențialitate</Link><Link to="/termeni-si-conditii">Termeni și condiții</Link></div>
         </div>
       </footer>

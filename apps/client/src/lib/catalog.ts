@@ -131,7 +131,7 @@ export function getCategoryBySlug(slug: string) {
 }
 
 export const company = {
-  name: "CONSTRUMAT DEMO",
+  name: "ROT MAN CONSTRUCT",
   tagline: "Materiale corecte pentru proiecte solide.",
   phone: "+40 700 000 000",
   email: "oferta@construmat-demo.ro",
