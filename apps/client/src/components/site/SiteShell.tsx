@@ -70,7 +70,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>CATALOG PRODUSE</small></span>
             </Link>
             <p className="footer-intro">Un catalog modern pentru materiale de construcții, construit să transforme o nevoie clară într-o ofertă bine pregătită.</p>
-            <span className="demo-note">Date demonstrative · înlocuiește înainte de publicare</span>
+            <span className="demo-note">Materiale pentru toate buzunarele · adresându-ne tuturor, de la proprietar la constructor, ajutându-vă la implementarea proiectelor</span>
           </div>
           <div>
             <p className="footer-heading">Navigație</p>
