@@ -41,7 +41,7 @@ export const products: Product[] = [
   {
     id: "ciment-demo",
     slug: "ciment-demo",
-    name: "Ciment pentru lucrări generale — produs demo",
+    name: "Ciment pentru lucrări generale",
     category: "Ciment și mortare",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
@@ -51,7 +51,7 @@ export const products: Product[] = [
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
-      { label: "Utilizare", value: "Lucrări generale — demo" },
+      { label: "Utilizare", value: "Lucrări generale" },
       { label: "Clasă", value: "De completat cu date reale" },
     ],
     priceRon: 0,
@@ -61,7 +61,7 @@ export const products: Product[] = [
   {
     id: "adeziv-demo",
     slug: "adeziv-demo",
-    name: "Adeziv flexibil pentru placări — produs demo",
+    name: "Adeziv flexibil pentru placări",
     category: "Adezivi și chituri",
     categorySlug: "adezivi-chituri",
     shortDescription: "Exemplu de adeziv pentru placări interioare și exterioare.",
@@ -71,7 +71,7 @@ export const products: Product[] = [
     unit: "sac",
     sampleSpecs: [
       { label: "Suprafață", value: "Exemplu de completat" },
-      { label: "Aplicare", value: "Interior / exterior — demo" },
+      { label: "Aplicare", value: "Interior / exterior" },
       { label: "Consum", value: "De completat cu date reale" },
     ],
     priceRon: 0,
@@ -79,19 +79,19 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    id: "hidroizolatie-demo",
-    slug: "hidroizolatie-demo",
-    name: "Membrană pentru hidroizolație — produs demo",
+    id: "hidroizolatie"
+    slug: "hidroizolatie",
+    name: "Membrană pentru hidroizolație",
     category: "Hidroizolații",
     categorySlug: "hidroizolatii",
     shortDescription: "Exemplu de rolă pentru protecția fundațiilor și suprafețelor.",
     description:
-      "Produs demonstrativ. Tipul membranei, dimensiunile, compatibilitățile și prețul se configurează după furnizarea datelor reale.",
+      "Produse. Tipul membranei, dimensiunile, compatibilitățile și prețul se configurează după furnizarea datelor reale.",
     image: imageFor("product.hidro-demo.card"),
     unit: "rolă",
     sampleSpecs: [
       { label: "Format", value: "Exemplu de completat" },
-      { label: "Destinație", value: "Fundații și suprafețe — demo" },
+      { label: "Destinație", value: "Fundații și suprafețe" },
       { label: "Date tehnice", value: "De completat cu date reale" },
     ],
     priceRon: 0,
@@ -99,9 +99,9 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    id: "termoizolatie-demo",
-    slug: "termoizolatie-demo",
-    name: "Placă termoizolantă — produs demo",
+    id: "termoizolatie",
+    slug: "termoizolatie",
+    name: "Placă termoizolantă — produs ",
     category: "Polistiren și termoizolații",
     categorySlug: "polistiren-termoizolatii",
     shortDescription: "Exemplu de soluție pentru anveloparea clădirilor.",
