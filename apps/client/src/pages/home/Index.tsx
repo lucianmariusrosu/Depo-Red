@@ -40,7 +40,7 @@ const Index = () => {
       <section className="section section-intro">
         <div className="site-container intro-grid">
           <div>
-            <span className="eyebrow">01 · De ce CONSTRUMAT</span>
+            <span className="eyebrow">01 · De ce să alegi ROT MAN CONSTRUCT?</span>
             <h2>Mai puțin timp pierdut.<br /><span>Mai multă claritate.</span></h2>
           </div>
           <div className="intro-copy">
