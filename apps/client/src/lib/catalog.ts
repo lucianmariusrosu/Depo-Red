@@ -47,7 +47,7 @@ export const products: Product[] = [
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
     description:
       "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
-    image: imageFor("product.ciment.card"),
+    image: imageFor("ciment-structo-plus.webp"),
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
