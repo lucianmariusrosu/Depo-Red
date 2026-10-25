@@ -18,7 +18,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      "/": "ROT MAN CONSTRUCT — Materiale pentru proiecte marete",
+      "/": "ROT MAN CONSTRUCT — Materiale diversificate pentru proiecte marete",
       "/produse": "Catalog produse — ROT MAN CONSTRUCT",
       "/cerere-oferta": "Solicită ofertă — ROT MAN CONSTRUCT",
       "/despre-noi": "Despre noi — ROT MAN CONSTRUCT",
@@ -42,7 +42,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="site-container header-inner">
           <Link to="/" className="brand" aria-label="ROT MAN CONSTRUCT, acasă" onClick={() => setOpen(false)}>
             <span className="brand-mark">C<span>.</span></span>
-            <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>MATERIALE DIVERSIFICATE PENTRU PROIECTE MARETE</MARETE></small></span>
+            <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>MATERIALE DIVERSIFICATE PENTRU PROIECTE MARETE</small></span>
           </Link>
           <button className="mobile-menu-button" type="button" aria-label={open ? "Închide meniul" : "Deschide meniul"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
             {open ? <X size={22} /> : <Menu size={22} />}
