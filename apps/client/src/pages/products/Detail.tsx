@@ -30,7 +30,7 @@ const ProductDetail = () => {
           <div className="product-detail-grid">
             <div className="product-detail-media">
               <img data-image-slot={`product.${product.id}.card`} src={product.image} alt={product.name} width="720" height="540" />
-              <span className="sample-badge sample-badge-dark">PRODUS DEMO · ÎNLOCUIEȘTE DATELE</span>
+              <span className="sample-badge sample-badge-dark">PRODUS · ÎNLOCUIEȘTE DATELE</span>
             </div>
             <div className="product-detail-copy">
               <span className="eyebrow">{product.category}</span>

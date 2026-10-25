@@ -95,7 +95,7 @@ const Index = () => {
               <article className="product-card" key={product.id}>
                 <Link to={`/produse/${product.slug}`} className="product-card-image">
                   <img data-image-slot={`product.${product.id}.card`} src={product.image} alt={product.name} width="720" height="540" />
-                  <span className="sample-badge">PRODUS DEMO</span>
+                  <span className="sample-badge">PRODUS</span>
                 </Link>
                 <div className="product-card-content">
                   <span className="product-category">{product.category}</span>
