@@ -33,7 +33,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <div className="site-frame">
       <div className="top-strip">
         <div className="site-container top-strip-inner">
-          <span>Furnizor local pentru proiecte care țin.</span>
+          <span>Furnizor local pentru proiecte marete.</span>
           <span className="top-strip-meta"><Phone size={14} /> {company.phone}</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="site-container header-inner">
           <Link to="/" className="brand" aria-label="ROT MAN CONSTRUCT, acasă" onClick={() => setOpen(false)}>
             <span className="brand-mark">C<span>.</span></span>
-            <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>MATERIALE PENTRU PROIECTE SOLIDE</small></span>
+            <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>MATERIALE DIVERSIFICATE PENTRU PROIECTE SOLIDE</small></span>
           </Link>
           <button className="mobile-menu-button" type="button" aria-label={open ? "Închide meniul" : "Deschide meniul"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
             {open ? <X size={22} /> : <Menu size={22} />}
