@@ -67,7 +67,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <Link to="/" className="brand brand-footer">
               <span className="brand-mark">C<span>.</span></span>
-              <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>CATALOG DEMO</small></span>
+              <span className="brand-copy"><strong>ROT MAN CONSTRUCT</strong><small>CATALOG PRODUSE</small></span>
             </Link>
             <p className="footer-intro">Un catalog modern pentru materiale de construcții, construit să transforme o nevoie clară într-o ofertă bine pregătită.</p>
             <span className="demo-note">Date demonstrative · înlocuiește înainte de publicare</span>

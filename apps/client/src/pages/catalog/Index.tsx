@@ -31,7 +31,7 @@ const CatalogPage = () => {
         <div className="site-container">
           <div className="catalog-toolbar">
             <label className="search-box"><Search size={18} /><span className="sr-only">Caută în catalog</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Caută produse sau categorii..." /></label>
-            <div className="catalog-count"><span>{visibleProducts.length}</span> produse demo</div>
+            <div className="catalog-count"><span>{visibleProducts.length}</span</div>
           </div>
           <div className="catalog-layout">
             <aside className="catalog-sidebar">
