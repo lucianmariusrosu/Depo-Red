@@ -1,11 +1,11 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { structo, imageFor } from "./webp"
+import { Ciment, imageFor } from "./catalog"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-export const products: structo[] = [
+export const products: Ciment[] = [
   {
     id: "ciment-structo",
 slug: "ciment-structo-plus",
