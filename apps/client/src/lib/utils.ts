@@ -9,8 +9,7 @@ export const products: Product[] = [
   {
     id: "ciment-structo",
     slug: "ciment-structo-plus",
-    image: "/images/..."
-    name: "Ciment pentru lucrări generale",
+        name: "Ciment pentru lucrări generale",
     category: "Ciment și mortare",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
