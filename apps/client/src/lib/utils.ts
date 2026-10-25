@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Product, imageFor } from "./catalog"
+import { structo, imageFor } from "./webp.ts"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
