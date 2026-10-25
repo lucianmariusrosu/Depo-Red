@@ -132,7 +132,7 @@ export function getCategoryBySlug(slug: string) {
 
 export const company = {
   name: "ROT MAN CONSTRUCT",
-  tagline: "Materiale corecte pentru proiecte solide.",
+  tagline: "MATERIALE DIVERSIFICATE PENTRU PROIECTE MARETE",
   phone: "+40 744 116 311",
   email: "angelica.dumbrava@yahoo.com",
   address: "Adresă placeholder, România",
