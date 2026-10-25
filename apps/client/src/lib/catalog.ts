@@ -39,15 +39,15 @@ const imageFor = (slot: string) => `/assets/slots/${slot}.jpg`;
 
 export const products: Product[] = [
   {
-    id: "ciment-demo",
-    slug: "ciment-demo",
+    id: "ciment",
+    slug: "ciment",
     name: "Ciment pentru lucrări generale",
     category: "Ciment și mortare",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
     description:
       "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
-    image: imageFor("product.ciment-demo.card"),
+    image: imageFor("product.ciment.card"),
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
@@ -59,15 +59,15 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    id: "adeziv-demo",
-    slug: "adeziv-demo",
+    id: "adeziv",
+    slug: "adeziv",
     name: "Adeziv flexibil pentru placări",
     category: "Adezivi și chituri",
     categorySlug: "adezivi-chituri",
     shortDescription: "Exemplu de adeziv pentru placări interioare și exterioare.",
     description:
       "Produs demonstrativ. Specificațiile, consumul și compatibilitatea trebuie înlocuite cu informații verificate de la furnizor înainte de publicare.",
-    image: imageFor("product.adeziv-demo.card"),
+    image: imageFor("product.adeziv.card"),
     unit: "sac",
     sampleSpecs: [
       { label: "Suprafață", value: "Exemplu de completat" },
@@ -87,7 +87,7 @@ export const products: Product[] = [
     shortDescription: "Exemplu de rolă pentru protecția fundațiilor și suprafețelor.",
     description:
       "Produse. Tipul membranei, dimensiunile, compatibilitățile și prețul se configurează după furnizarea datelor reale.",
-    image: imageFor("product.hidro-demo.card"),
+    image: imageFor("product.hidro.card"),
     unit: "rolă",
     sampleSpecs: [
       { label: "Format", value: "Exemplu de completat" },
@@ -111,7 +111,7 @@ export const products: Product[] = [
     unit: "m²",
     sampleSpecs: [
       { label: "Grosime", value: "Exemplu de completat" },
-      { label: "Utilizare", value: "Anvelopare — demo" },
+      { label: "Utilizare", value: "Anvelopare" },
       { label: "Format", value: "De completat cu date reale" },
     ],
     priceRon: 0,
