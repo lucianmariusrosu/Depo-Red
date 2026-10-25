@@ -79,7 +79,7 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    id: "hidroizolatie"
+    id: "hidroizolatie",
     slug: "hidroizolatie",
     name: "Membrană pentru hidroizolație",
     category: "Hidroizolații",
