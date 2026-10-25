@@ -1,11 +1,11 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { ciment, imageFor } from "./catalog"
+import { product, imageFor } from "./catalog"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-export const products: ciment[] = [
+export const products: product[] = [
   {
     id: "ciment-structo",
 slug: "ciment-structo-plus",
@@ -14,7 +14,7 @@ slug: "ciment-structo-plus",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
     description: "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
-    image: imageFor("ciment-structo-plus.webp"),
+    image: "/assets/slots/ciment-structo-plus.webp",
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
