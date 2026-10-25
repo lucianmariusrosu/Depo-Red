@@ -7,8 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 export const products: Product[] = [
   {
-    id: "ciment-structo",
-    slug: "ciment-structo-plus",
+    id: "ciment structo",
+    slug: "ciment structo plus",
         name: "Ciment pentru lucrări generale",
     category: "Ciment și mortare",
     categorySlug: "ciment-mortare",
