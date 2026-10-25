@@ -2,7 +2,8 @@ import { Filter, Search, SlidersHorizontal } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useMemo, useState } from "react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { categories, products } from "@/lib/catalog";
+import { categories } from "@/lib/catalog";
+import { products } from "@/lib/utils";
 
 const CatalogPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
