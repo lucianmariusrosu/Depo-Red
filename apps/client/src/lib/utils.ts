@@ -5,16 +5,16 @@ import { product, imageFor } from "./catalog"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-export const products: product[] = [
+export const products: Product[] = [
   {
-    id: "ciment-structo",
-slug: "ciment-structo-plus",
-        name: "Ciment pentru lucrări generale",
+    id: "ciment-demo",
+slug: "ciment-demo",
+        name: "Ciment pentru lucrări generale - produs demo",
     category: "Ciment și mortare",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
     description: "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
-    image: "/assets/slots/ciment-structo-plus.webp",
+    image: "imageFor("product.ciment-demo.card"),",
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
