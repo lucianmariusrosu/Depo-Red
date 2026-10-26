@@ -5,6 +5,7 @@ import { product, imageFor } from "./catalog"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
 export const products: product[] = [
   {
     id: "ciment-demo",
