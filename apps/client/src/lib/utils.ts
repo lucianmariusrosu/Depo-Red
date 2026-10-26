@@ -14,7 +14,7 @@ slug: "ciment-demo",
     categorySlug: "ciment-mortare",
     shortDescription: "Exemplu de produs pentru fundații, șape și lucrări de reparații.",
     description: "Acesta este un produs demonstrativ, folosit pentru a ilustra structura catalogului. Înlocuiește conținutul cu fișa tehnică, producătorul și prețul reale înainte de publicare.",
-    image: "imageFor("product.ciment-demo.card"),",
+    image: "imageFor("product.ciment-demo.card")",
     unit: "sac",
     sampleSpecs: [
       { label: "Ambalare", value: "Exemplu de completat" },
